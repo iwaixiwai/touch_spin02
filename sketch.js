@@ -18,6 +18,18 @@ function setup() {
 function draw() {
   background(200);
 
+  if (deviceOrientation === 'portrait') {
+    // 縦向きの場合の処理
+    textSize(20);
+    textAlign(CENTER, CENTER);
+    text('現在は縦向きです', width / 2, height / 2);
+  } else if (deviceOrientation === 'landscape') {
+    // 横向きの場合の処理
+    textSize(20);
+    textAlign(CENTER, CENTER);
+    text('現在は横向きです', width / 2, height / 2);
+  }
+
   // タッチがある場合はタッチ座標を使用し、ない場合はマウス座標を使用
 
      if (touches.length > 0) {
